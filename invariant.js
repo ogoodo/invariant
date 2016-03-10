@@ -21,7 +21,10 @@
  */
 
 var NODE_ENV = process.env.NODE_ENV;
-
+/**
+ * 条件不成立是, 抛出一个格式化后的字符
+ * 方便参数之类的检测是否合乎规范
+ */
 var invariant = function(condition, format, a, b, c, d, e, f) {
   if (NODE_ENV !== 'production') {
     if (format === undefined) {
